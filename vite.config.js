@@ -6,6 +6,7 @@ import Components from 'unplugin-vue-components/vite'
 import * as path from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
+import Icons from 'unplugin-icons/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,6 +17,7 @@ export default defineConfig({
     Components({
       dts: true,
     }),
+    Icons(),
     AutoImport({
       include: [
         /\.vue$/,
@@ -25,6 +27,9 @@ export default defineConfig({
       eslintrc: {
         enabled: true,
       },
+      dirs: [
+        './src/composables/**',
+      ]
     }),
     Unocss(),
   ],

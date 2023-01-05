@@ -46,6 +46,7 @@
     "toRefs": true,
     "triggerRef": true,
     "unref": true,
+    "useAdminNav": true,
     "useAttrs": true,
     "useCssModule": true,
     "useCssVars": true,

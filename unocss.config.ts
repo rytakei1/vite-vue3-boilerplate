@@ -12,6 +12,7 @@ export default defineConfig({
       dark: '#02355e',
       light: '#c1e3ff',
       secondary: '#82c7ff',
+      hoversecondary: '#aad7fc',
     },
     breakpoints: {
       sm: '639px',

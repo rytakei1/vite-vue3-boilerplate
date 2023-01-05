@@ -10,6 +10,7 @@ declare module '@vue/runtime-core' {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Sidebar: typeof import('./src/components/Layout/Sidebar.vue')['default']
     TestComponent: typeof import('./src/components/TestComponent.vue')['default']
   }
 }
