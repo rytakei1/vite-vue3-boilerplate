@@ -7,10 +7,15 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Button: typeof import('./src/components/Button.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    Input: typeof import('./src/components/Forms/Input.vue')['default']
+    Modal: typeof import('./src/components/Modal.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Sidebar: typeof import('./src/components/Layout/Sidebar.vue')['default']
+    Spinner: typeof import('./src/components/Utils/Spinner.vue')['default']
+    Table: typeof import('./src/components/Table.vue')['default']
     TestComponent: typeof import('./src/components/TestComponent.vue')['default']
   }
 }

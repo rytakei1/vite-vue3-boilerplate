@@ -1,5 +1,7 @@
 <template>
-  <router-view />
+  <div class="flex w-full min-h-100vh">
+    <router-view />
+  </div>
 </template>
 
 <script setup lang="ts"></script>
