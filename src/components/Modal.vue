@@ -2,6 +2,7 @@
   <div
     v-if="modelValue"
     class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 flex justify-center pt-16"
+    @click.self="handleClose()"
   >
     <div
       class="w-1/2 h-full outline-none overflow-x-hidden overflow-y-auto"
@@ -32,19 +33,10 @@
             class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md"
           >
             <slot name="footer">
-              <button
-                type="button"
-                class="px-6 py-2.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
-                data-bs-dismiss="modal"
+              <Button outlined class="mr-4" @click="handleClose()"
+                >Cancel</Button
               >
-                Close
-              </button>
-              <button
-                type="button"
-                class="px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out ml-1"
-              >
-                Save changes
-              </button>
+              <Button @click="emits('submit')">Save</Button>
             </slot>
           </div>
         </div>
@@ -66,7 +58,7 @@ defineProps({
     default: 'Title',
   },
 })
-const emits = defineEmits(['update:modelValue'])
+const emits = defineEmits(['update:modelValue', 'submit'])
 const handleClose = () => {
   emits('update:modelValue', false)
 }
