@@ -1,6 +1,4 @@
-// @ts-expect-error
 import IconGraphBoxOutline from '~icons/mdi/graph-box-outline'
-// @ts-expect-error
 import IconAccountBoxOutline from '~icons/mdi/account-box-outline'
 export interface IMenuEntry {
   label: string
